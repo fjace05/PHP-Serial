@@ -61,8 +61,9 @@ class PhpSerial
         if (substr($sysName, 0, 5) === "Linux") {
             $this->_os = "linux";
             if ($this->_exec("stty") !== 0) {
+                /*
                 throw new PhpSerialOSException("No stty availible, unable to run.",
-                    E_USER_ERROR);
+                    E_USER_ERROR);*/
             }
         } elseif (substr($sysName, 0, 6) === "Darwin") {
             $this->_os = "osx";
